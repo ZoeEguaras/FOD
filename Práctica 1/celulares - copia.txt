@@ -1,0 +1,18 @@
+1 100 Motorola
+200 50 Plateado, con funda.
+G10
+2 250 Samsung
+10 50 Negro, sin componentes.
+J25
+3 150 Motorola
+30 50 Negro, sin funda.
+G5 Play
+4 300 IPhone
+200 50 Blanco, con cargador.
+IPhone 11
+5 200 Samsung
+20 50 Blanco, con cargador y vidrio templado.
+J9 Plus
+6 100 Motorola
+10 50 Negro, con cargador y funda.
+G59

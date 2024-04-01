@@ -1,0 +1,14 @@
+1 2500.00   Terror
+La Milla Verde
+2 1500.00   Suspenso
+La pregunta de sus ojos
+3 1200.00   Terror
+El gato negro
+4 2100.00   Comedia-Teatral
+La nona
+5 2400.00  Suspenso
+El Tunel
+8 3488.00  Comedia
+SpaceWorld
+23 2876.00  Suspenso
+Carrie
