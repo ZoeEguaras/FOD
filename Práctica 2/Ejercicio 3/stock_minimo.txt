@@ -1,0 +1,4 @@
+Codigo: 1 Nombre: Leche Precio: 1550.00 Stock actual: 15 Stock minimo: 50
+Codigo: 3 Nombre: Harina Precio: 850.00 Stock actual: 20 Stock minimo: 50
+Codigo: 4 Nombre: Papel de Cocina Precio: 2378.00 Stock actual: 11 Stock minimo: 50
+Codigo: 5 Nombre: Huevos Precio: 2360.00 Stock actual: 35 Stock minimo: 50

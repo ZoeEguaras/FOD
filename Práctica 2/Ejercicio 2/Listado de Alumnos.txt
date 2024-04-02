@@ -1,0 +1,2 @@
+Codigo: 1 Apellido: Nunez Nombre: Valentin Cursadas Aprobadas: 1 Finales Aprobados: 8
+Codigo: 2 Apellido: Eguaras Nombre: Zoe Cursadas Aprobadas: 1 Finales Aprobados: 4

@@ -1,0 +1,12 @@
+1 juan
+23.50
+1 juan
+34.80
+1 juan
+24.00
+6 pedro
+45.00
+6 pedro
+12.00
+9 valentin
+32.00
