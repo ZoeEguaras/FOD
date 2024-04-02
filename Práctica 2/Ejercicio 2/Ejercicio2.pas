@@ -159,7 +159,7 @@ BEGIN
 	
 	repeat
 		writeln('------- MENU -------');
-		writeln('1. Crear archivos (esto es para probarlo).');
+		writeln('1. Crear archivos (para probarlo).');
 		writeln('2. Actualizar archivo maestro.');
 		writeln('3. Listar en texto a los alumnos que tengan más materias con finales aprobados que materias sin finales aprobados.');
 		writeln('4. Salir.');

@@ -1,0 +1,2 @@
+Nombre: Leche Descripcion: Descremada y sin agregados. Stock disponible: 10 Precio: 1850.00
+Nombre: Harina Descripcion: Triple cero, con TACC. Stock disponible: 40 Precio: 950.00
