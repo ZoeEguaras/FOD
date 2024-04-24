@@ -1,0 +1,1 @@
+Los ejercicios del 11 al 18 no los resolví porque me atrasaba mucho con la práctica 3. En el grupo dijeron que seguían la misma modalidad que los anteriores así que voy a confiar en eso y los dejaré para después (o nunca).
