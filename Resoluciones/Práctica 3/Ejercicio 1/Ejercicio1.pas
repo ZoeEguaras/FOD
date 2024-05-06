@@ -241,18 +241,17 @@ end;
 
 procedure eliminarEmpleado (var empleados: archivo_empleados);
 var
-	numero, pos: integer; empleado: reg_empleados; found: boolean;
+	numero, pos: integer; empleado: reg_empleados;
 begin
 	reset (empleados);
 	writeln(#10, 'Ingrese el numero del empleado a eliminar: ');
 	readln(numero);
 	
-	found:= false;
-	while not EOF(empleados) and (not found) do begin
+	read(empleados, empleado);
+	while not EOF(empleados) and (empleado.numero <> numero) do begin
 		read(empleados, empleado);
-		if (empleado.numero = numero) then found:= true;
 	end;
-	if (found) then begin
+	if (empleado.numero = numero) then begin
 		pos:= filePos(empleados) - 1;
 		seek(empleados, fileSize(empleados) - 1);
 		read(empleados, empleado);
