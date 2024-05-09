@@ -69,16 +69,6 @@ begin
 	writeln;
 end;
 
-procedure cargarCabecera (var cabecera: reg_novela);
-begin
-	cabecera.codigo:= 0;
-	cabecera.genero:= '-';
-	cabecera.nombre:= '-';
-	cabecera.duracion:= 0;
-	cabecera.director:= '-';
-	cabecera.precio:= 0;
-end;
-
 procedure imprimirNovela (novela: reg_novela);
 begin
 	writeln('Codigo: ', novela.codigo);
@@ -108,7 +98,7 @@ begin
 	asignarNombre(archivo);
 	rewrite(archivo);
 	
-	cargarCabecera(novela);
+	novela.codigo:= 0;
 	write(archivo, novela);
 	writeln(#10, 'CARGANDO ARCHIVO...');
 	writeln('- Ingrese el codigo -1 para finalizar.', #10);

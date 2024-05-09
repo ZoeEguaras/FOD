@@ -144,7 +144,7 @@ BEGIN
 		writeln('4. Exportar contenido a texto.');
 		writeln('5. Salir.');
 		readln(opcion);
-		if (opcion = 1) or (opcion = 2) or (opcion = 3) or (opcion = 4) then begin
+		if (opcion >= 1) and (opcion <= 4) then begin
 			writeln('Ingrese el nombre del archivo: ');
 			readln(nom_fisico);
 			assign(celulares, nom_fisico);

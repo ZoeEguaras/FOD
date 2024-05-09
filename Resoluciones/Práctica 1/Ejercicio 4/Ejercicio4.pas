@@ -260,7 +260,7 @@ BEGIN
 		writeln('6. Exportar a texto los empleados sin DNI cargado.');
 		writeln('7. Cerrar menu.');
 		readln(opcion);
-		if (opcion = 1) or (opcion = 2) or (opcion = 3) or (opcion = 4) or (opcion = 5) or (opcion = 6) then begin
+		if (opcion >= 1) and (opcion <= 6) then begin
 			write('Ingrese el nombre del archivo: ');
 			readln(nombre_fisico);
 			assign(empleados, nombre_fisico);

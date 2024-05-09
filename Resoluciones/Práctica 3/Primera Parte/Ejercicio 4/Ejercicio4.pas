@@ -39,12 +39,6 @@ begin
 	readln(flor.codigo);
 end;
 
-procedure cargarCabecera (var cabecera: reg_flor);
-begin
-	cabecera.nombre:= '-';
-	cabecera.codigo:= 0;
-end;
-
 procedure imprimirFlor (flor: reg_flor);
 begin
 	writeln('Nombre: ', flor.nombre);
@@ -69,7 +63,7 @@ var
 begin
 	rewrite(archivo);
 	
-	cargarCabecera(flor);
+	flor.codigo:= 0;
 	write(archivo, flor);
 	writeln(#10, 'CARGANDO ARCHIVO...');
 	writeln('- Ingrese el codigo -1 para finalizar.', #10);

@@ -238,7 +238,7 @@ BEGIN
 		writeln('7. Exportar celulares sin stock a texto.');
 		writeln('8. Salir.');
 		readln(opcion);
-		if (opcion = 1) or (opcion = 2) or (opcion = 3) or (opcion = 4) or (opcion = 5) or (opcion = 6) or (opcion = 7) then begin
+		if (opcion >= 1) and (opcion <= 7) then begin
 			writeln('Ingrese el nombre del archivo: ');
 			readln(nom_fisico);
 			assign(celulares, nom_fisico);

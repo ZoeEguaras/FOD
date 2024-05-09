@@ -253,12 +253,18 @@ begin
 	end;
 	if (empleado.numero = numero) then begin
 		pos:= filePos(empleados) - 1;
-		seek(empleados, fileSize(empleados) - 1);
-		read(empleados, empleado);
-		seek(empleados, pos);
-		write(empleados, empleado);
-		seek(empleados, fileSize(empleados) - 1);
-		truncate(empleados);
+		if (pos < fileSize(empleados) - 1) then begin
+			seek(empleados, fileSize(empleados) - 1);
+			read(empleados, empleado);
+			seek(empleados, pos);
+			write(empleados, empleado);
+			seek(empleados, fileSize(empleados) - 1);
+			truncate(empleados);
+		end
+		else begin
+			seek(empleados, pos);
+			truncate(empleados);
+		end;
 		writeln(#10, 'Empleado numero ', numero, ' eliminado con éxito.', #10);
 	end
 	else writeln(#10, 'No se encontró el empleado numero ', numero, #10);
@@ -283,8 +289,8 @@ BEGIN
 		writeln('7. Borrar a un empleado.');
 		writeln('8. Cerrar menu.');
 		readln(opcion);
-		if (opcion = 1) or (opcion = 2) or (opcion = 3) or (opcion = 4) or (opcion = 5) or (opcion = 6) or (opcion = 7) then begin
-			write('Ingrese el nombre del archivo: ');
+		if (opcion >= 1) and (opcion <= 7) then begin
+			writeln(#10, 'Ingrese el nombre del archivo: ');
 			readln(nombre_fisico);
 			assign(empleados, nombre_fisico);
 		end;
@@ -296,9 +302,9 @@ BEGIN
 			5: ExportarTexto (empleados);
 			6: SinDNI (empleados);
 			7: eliminarEmpleado (empleados);
-			8: write(#10, 'Cerrando...');
-		else write('El numero ingresado no corresponde con ninguna opcion. Intenta de nuevo.', #10);
+			8: writeln(#10, 'Cerrando...');
+		else writeln(#10, 'El numero ingresado no corresponde con ninguna opcion. Intenta de nuevo.', #10);
 		end;
-	until opcion = 8
+	until opcion = 8;
 END.
 

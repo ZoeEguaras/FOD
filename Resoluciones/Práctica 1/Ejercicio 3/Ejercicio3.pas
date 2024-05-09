@@ -133,13 +133,15 @@ var
 	opcion: integer;
 	
 BEGIN
-	write('Seleccione la opcion deseada', #10, '1. Crear archivo.', #10, '2. Abrir archivo.', #10);
-	readln(opcion);
-	case opcion of
-		1: CrearArchivo (empleados);
-		2: AbrirArchivo (empleados);
-	else write('El numero ingresado no corresponde con ninguna opcion.');
-	end;
-	
+	repeat
+		write('Seleccione la opcion deseada', #10, '1. Crear archivo.', #10, '2. Abrir archivo.', #10, '3. Salir.', #10);
+		readln(opcion);
+		case opcion of
+			1: CrearArchivo (empleados);
+			2: AbrirArchivo (empleados);
+			3: writeln('Cerrando menu...');
+		else write('El numero ingresado no corresponde con ninguna opcion.');
+		end;
+	until opcion = 3;
 END.
 

@@ -191,7 +191,7 @@ BEGIN
 		writeln('4. Cerrar aplicacion.');
 		readln(opcion);
 		writeln;
-		if (opcion = 1) or (opcion = 2) or (opcion = 3) then begin
+		if (opcion >= 1) and (opcion <= 3) then begin
 			writeln('Ingrese el nombre del archivo: ');
 			readln(nombre_fisico);
 			writeln;
