@@ -46,15 +46,9 @@ var
 begin
 	min.cod_usuario:= valor_alto;
 	for i:= 1 to dimF do begin
-		if (reg_d[i].cod_usuario < min.cod_usuario) then begin
+		if (reg_d[i].cod_usuario < min.cod_usuario) or ((reg_d[i].cod_usuario = min.cod_usuario) and (reg_d[i].fecha < min.fecha)) then begin
 			min:= reg_d[i];
 			pos:= i;
-		end
-		else begin
-			if (reg_d[i].cod_usuario = min.cod_usuario) and (reg_d[i].fecha < min.fecha) then begin
-				min:= reg_d[i];
-				pos:= i
-			end;
 		end;
 	end;
 	if (min.cod_usuario <> valor_alto) then	leer(detalles[pos], reg_d[pos]);

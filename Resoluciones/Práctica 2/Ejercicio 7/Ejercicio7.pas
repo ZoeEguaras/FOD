@@ -67,15 +67,9 @@ var
 begin
 	min.localidad_cod:= valor_alto;
 	for i:= 1 to dimF do begin
-		if (reg_d[i].localidad_cod < min.localidad_cod) then begin
+		if (reg_d[i].localidad_cod < min.localidad_cod) or ((reg_d[i].localidad_cod = min.localidad_cod) and (reg_d[i].cepa_cod < min.cepa_cod)) then begin
 			min:= reg_d[i];
 			pos:= i;
-		end
-		else begin
-			if (reg_d[i].localidad_cod = min.localidad_cod) and (reg_d[i].cepa_cod < min.cepa_cod) then begin
-				min:= reg_d[i];
-				pos:= i
-			end;
 		end;
 	end;
 	if (min.localidad_cod <> valor_alto) then leer(detalles[pos], reg_d[pos]);
